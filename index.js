@@ -1,5 +1,5 @@
 /*
-    Block's naming conventions for React Elements
+    Block's naming convention helper for React Elements
     https://en.bem.info/methodology/naming-convention/
 */
 
