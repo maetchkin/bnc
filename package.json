@@ -1,6 +1,6 @@
 {
   "name": "bnc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Block naming convention helper written on es6",
   "scripts": {
     "compile": "babel --presets es2015 -d ./dist index.js",
