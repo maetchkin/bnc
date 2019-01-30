@@ -20,7 +20,7 @@ var delims = {
 
 var bnc = function () {
     function bnc(name) {
-        var lvl = arguments.length <= 1 || arguments[1] === undefined ? 'block' : arguments[1];
+        var lvl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'block';
 
         _classCallCheck(this, bnc);
 
@@ -30,7 +30,7 @@ var bnc = function () {
         if (typeof name !== 'string') {
             throw new TypeError('BNC: Wrong name type');
         }
-        if (name.replace(/[^0-9a-z\-\_]/gi, '') !== name) {
+        if (name.replace(/[^0-9a-z\-_]/gi, '') !== name) {
             throw new RangeError('BNC: Wrong name');
         }
         this.name = name;
@@ -49,14 +49,14 @@ var bnc = function () {
     }, {
         key: 'boolmod',
         value: function boolmod(mod) {
-            var modVal = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
+            var modVal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
             return modVal ? this.mod(mod) : this;
         }
     }, {
         key: 'mod',
         value: function mod(_mod) {
-            var modVal = arguments.length <= 1 || arguments[1] === undefined ? void 0 : arguments[1];
+            var modVal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : void 0;
 
 
             if (this.lvl != 'block' && this.lvl != 'el') {

@@ -21,7 +21,7 @@ export default class bnc {
         if (typeof(name) !== 'string' ) {
             throw new TypeError('BNC: Wrong name type');
         }
-        if (name.replace(/[^0-9a-z\-\_]/gi,'') !== name ) {
+        if (name.replace(/[^0-9a-z\-_]/gi,'') !== name ) {
             throw new RangeError('BNC: Wrong name');
         }
         this.name = name;

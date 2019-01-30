@@ -1,0 +1,28 @@
+extends:
+  - eslint:recommended
+
+parser: babel-eslint
+
+parserOptions:
+  sourceType: module
+  ecmaVersion: 2018
+  ecmaFeatures:
+    modules: true
+    impliedStrict: true
+
+env:
+  es6: true
+  browser: true
+  node: true
+
+rules:
+  radix: 2
+  block-scoped-var: 2
+  no-console: 0
+  no-redeclare: 0
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
