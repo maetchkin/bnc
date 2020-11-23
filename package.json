@@ -1,10 +1,10 @@
 {
   "name": "bnc",
-  "version": "0.1.0",
-  "description": "Block naming convention helper written on es6",
+  "version": "1.0.0",
+  "description": "Block naming convention helper",
   "scripts": {
     "compile": "babel --presets es2015 -d ./dist index.js",
-    "test": "NODE_ENV=development mocha --compilers js:babel-core/register test/index.js",
+    "test": "NODE_ENV=development mocha --require babel-core/register test/index.js",
     "lint": "eslint index.js"
   },
   "main": "./dist/index.js",
@@ -15,10 +15,10 @@
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
-    "babel-preset-es2015": "^6.14.0",
     "babel-eslint": "^10.0.1",
+    "babel-preset-es2015": "^6.14.0",
     "chai": "3.5.0",
     "eslint": "^5.12.1",
-    "mocha": "^5.2.0"
+    "mocha": "^8.2.1"
   }
 }

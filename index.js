@@ -12,9 +12,10 @@ const
         'block', 'el', 'mod'
     ];
 
-export default class bnc {
+class bnc extends String {
 
     constructor ( name, lvl = 'block' ) {
+        super();
         if (lvls.indexOf(lvl)==-1) {
             throw 'BNC: Wrong level';
         }
@@ -45,6 +46,10 @@ export default class bnc {
         return modVal ? this.mod( mod ) : this;
     }
 
+    bod ( mod, modVal = false ) {
+        return modVal ? this.mod( mod ) : EmptyClass;
+    }
+
     mod ( mod, modVal = void(0) ) {
 
         if (this.lvl != 'block' && this.lvl != 'el') {
@@ -66,4 +71,12 @@ export default class bnc {
     toString () {
         return this.name + ' ';
     }
+
+    valueOf () {
+        return this.toString();
+    }
 }
+
+const EmptyClass = new bnc('');
+
+export default bnc
