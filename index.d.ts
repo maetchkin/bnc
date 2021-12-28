@@ -8,5 +8,9 @@ export type Ibnc = {
 export type Bnc = Ibnc & string;
 
 declare module 'bnc' {
-    export function bnc(name: string): Bnc;
+    interface BncCtor {
+        new (name: string) : Bnc;
+    }
+    const bnc: BncCtor;
+    export = bnc;
 }
