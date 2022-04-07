@@ -29,6 +29,10 @@ class bnc extends String {
         this.lvl  = lvl;
     }
 
+    bel ( elem, elemVal = false ) {
+        return elemVal ? this.el( elem ) : EmptyClass;
+    }
+
     el ( elem ) {
         if (this.lvl != 'block') {
             throw 'BNC: Wrong chaining: el ' + this.lvl ;

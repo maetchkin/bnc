@@ -1,5 +1,6 @@
 export type Ibnc = {
     el(elName: string): Ibnc & string;
+    bel(elName: string, elValue): Ibnc & string;
     boolmod(mod: string, modValue): Ibnc & string;
     bod(mod: string, modValue): Ibnc & string;
     mod(mod: string, modValue?: string): Ibnc & string;
