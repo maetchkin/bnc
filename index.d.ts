@@ -1,16 +1,15 @@
 export type Ibnc = {
-    el(elName: string): Ibnc & string;
-    boolmod(mod: string, modValue): Ibnc & string;
-    bod(mod: string, modValue): Ibnc & string;
-    mod(mod: string, modValue?: string): Ibnc & string;
+    el(elName: string): Bnc;
+    boolmod(mod: string, modValue?: boolean): Bnc;
+    bod(mod: string, modValue?: boolean): Bnc;
+    mod(mod: string, modValue?: string): Bnc;
 }
 
 export type Bnc = Ibnc & string;
 
-declare module 'bnc' {
-    interface BncCtor {
-        new (name: string) : Bnc;
-    }
-    const bnc: BncCtor;
-    export = bnc;
+interface BncCtor {
+    new(name: string): Bnc;
 }
+
+declare const bnc: BncCtor;
+export default bnc;
